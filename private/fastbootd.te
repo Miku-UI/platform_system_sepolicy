@@ -164,9 +164,6 @@ recovery_only(`
   allow fastbootd devpts:chr_file rw_file_perms;
 ')
 
-  # Fastbootd uses liblogwrap to write mke2fs logs to kmsg, liblogwrap requires devpts.
-  allow fastbootd devpts:chr_file rw_file_perms;
-
 # This capability allows fastbootd to circumvent memlock rlimits while using
 # io_uring. An Alternative would be to up the memlock rlimit for the fastbootd service.
 allow fastbootd self:capability ipc_lock;

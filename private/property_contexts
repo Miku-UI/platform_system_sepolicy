@@ -509,6 +509,9 @@ ro.audio.ihaladaptervendorextension_enabled u:object_r:system_audio_config_prop:
 # vendor implementation IHalAdapterVendorExtension
 ro.audio.ihaladaptervendorextension_libname u:object_r:system_audio_config_prop:s0 exact string
 
+# Integer property used to change the default period size for USB audio
+ro.audio.usb.period_us u:object_r:audio_config_prop:s0 exact int
+
 persist.config.calibration_fac u:object_r:camera_calibration_prop:s0 exact string
 
 config.disable_cameraservice u:object_r:camera_config_prop:s0 exact bool
@@ -684,6 +687,8 @@ bluetooth.core.le_audio.codec_extension_aidl.enabled u:object_r:bluetooth_config
 
 bluetooth.device.default_name                        u:object_r:bluetooth_config_prop:s0 exact string
 bluetooth.device.class_of_device                     u:object_r:bluetooth_config_prop:s0 exact string
+
+bluetooth.le.disable_apcf_extended_features          u:object_r:bluetooth_config_prop:s0 exact bool
 
 bluetooth.power.suspend.hid_wake_up.enabled          u:object_r:bluetooth_config_prop:s0 exact bool
 
@@ -1504,6 +1509,7 @@ ro.surface_flinger.max_graphics_height                    u:object_r:surfaceflin
 ro.surface_flinger.max_graphics_width                     u:object_r:surfaceflinger_prop:s0 exact int
 ro.surface_flinger.max_virtual_display_dimension          u:object_r:surfaceflinger_prop:s0 exact int
 ro.surface_flinger.primary_display_orientation            u:object_r:surfaceflinger_prop:s0 exact enum ORIENTATION_0 ORIENTATION_180 ORIENTATION_270 ORIENTATION_90
+ro.surface_flinger.secondary_display_orientation          u:object_r:surfaceflinger_prop:s0 exact enum ORIENTATION_0 ORIENTATION_180 ORIENTATION_270 ORIENTATION_90
 ro.surface_flinger.present_time_offset_from_vsync_ns      u:object_r:surfaceflinger_prop:s0 exact int
 ro.surface_flinger.running_without_sync_framework         u:object_r:surfaceflinger_prop:s0 exact bool
 ro.surface_flinger.start_graphics_allocator_service       u:object_r:surfaceflinger_prop:s0 exact bool
